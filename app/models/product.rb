@@ -9,8 +9,11 @@ class Product < ActiveRecord::Base
     end
 
     def print_all_reviews
-        puts "Review for #{self.name} by #{self.user.name}: #{self.review.star_rating}. #{self.review.comments}
+        self.reviews.map do |review|
+            puts "Review for #{self.name} by #{review.user.name}: #{review.star_rating}. #{review.comments}
         "
+        end
+        
     end
 
     def average_rating
