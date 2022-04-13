@@ -14,6 +14,6 @@ class Product < ActiveRecord::Base
     end
 
     def average_rating
-        self.reviews.star_rating.average
+        self.reviews.star_rating.sum / self.reviews.length +1
     end
 end
