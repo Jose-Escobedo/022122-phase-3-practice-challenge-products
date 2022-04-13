@@ -23,4 +23,7 @@ puts "Creating reviews..."
 # *****************************************************************
 # Create Reviews Here
 
+review1 = Review.create(star_rating: 5, comments: "This is awesome")
+review2 = Review.create(star_rating: 4, comments: "This is good")
+review3 = Review.create(star_rating: 3, comments: "This is bad")
 puts "Seeding done!"
